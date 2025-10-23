@@ -1,0 +1,292 @@
+/* -------------------------------------------------------------------------
+   Genel Stil Ayarları
+------------------------------------------------------------------------- */
+body {
+    font-family: 'Inter', sans-serif; /* Tailwind ve modern font tercihi */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex-grow: 1;
+}
+
+/* -------------------------------------------------------------------------
+   Navigasyon Stilleri
+------------------------------------------------------------------------- */
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+/* Navigasyon Linkleri - Hover Efektleri Eklendi */
+.nav-link {
+    color: #ffffff !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+}
+
+.navbar-toggler:hover {
+    color: #fff !important;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+}
+
+
+/* -------------------------------------------------------------------------
+   Arama ve Kart Stilleri
+------------------------------------------------------------------------- */
+
+/* Arama Formu Büyük Boyutlar */
+.form-select-lg, .form-control-lg, .btn-lg {
+    border-radius: 8px !important;
+}
+
+/* Sefer Kartı Stili */
+.trip-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    border-radius: 12px !important;
+}
+
+.trip-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+.trip-time {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+}
+.trip-duration {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+.trip-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #dc3545; /* danger color */
+}
+.company-logo {
+    height: 40px; 
+    width: auto; 
+    max-width: 100px;
+    margin-right: 15px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+
+/* -------------------------------------------------------------------------
+   Giriş Yap Modal Stilleri (checkLogin fonksiyonu için)
+   CSS blok sonlarındaki gereksiz noktalı virgüller (;) kaldırıldı.
+------------------------------------------------------------------------- */
+
+.custom-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+}
+.custom-modal-content {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: fadeIn 0.3s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+
+
+/* -------------------------------------------------------------------------
+   Responsive Düzenlemeler
+------------------------------------------------------------------------- */
+/* Küçük ekranlarda sefer detaylarını dikey hizala */
+@media (max-width: 767.98px) {
+    .trip-card .card-body {
+        align-items: flex-start !important;
+    }
+    .trip-card .card-body > div {
+        width: 100%;
+        margin-bottom: 10px !important;
+    }
+    .trip-card .card-body > div:last-child {
+        margin-bottom: 0 !important;
+    }
+    .trip-card .company-logo {
+        margin-right: 10px;
+    }
+    .trip-card .trip-time {
+        font-size: 1.2rem;
+    }
+    .trip-card .trip-price {
+        font-size: 1.5rem;
+        text-align: left !important;
+    }
+    .trip-card .d-flex.align-items-center {
+        justify-content: space-between;
+    }
+}
+
+
+/* -------------------------------------------------------------------------
+        Hesabım ve Biletlerim Sayfası CSS Dosyası
+------------------------------------------------------------------------- */
+.card-price{
+    background-color: #23a966;
+}
+
+.btn-download-pdf{
+    background-color: #00cf68;
+    color: #fff;
+}
+.btn-download-pdf:hover{
+    background-color: #00cf68e6;
+    color: #fff;
+}
+
+.text-price{
+    color: #00cf68;
+}
+
+/*  Seat Container ve Buton Stilleri */
+.seat-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            max-width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+        }
+
+        .seat-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            color: #333;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .seat-button.seat-booked {
+            background-color: #dc3545;
+            color: white;
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+
+        .seat-button.seat-selected {
+            background-color: #198754;
+            color: white;
+            border-color: #198754;
+        }
+
+        
+/*  Kampanyalar ve Kuponlar Stilleri */
+        .campaign-card {
+            border-width: 2px !important;
+            transition: transform 0.2s;
+        }
+
+        .campaign-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+        }
+
+        .code-box {
+            background-color: #e9ecef;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #dc3545;
+        }
+
+/* // Sefer Kartı Stilleri */
+        .trip-card-header {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+            padding: 1rem;
+        }
+
+        .trip-detail-icon {
+            font-size: 1.2rem;
+            color: #198754;
+        }
+
+        .trip-time {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #343a40;
+        }
+
+        .trip-duration {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .trip-price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #dc3545;
+            /* danger color */
+        }
+
+        .company-logo {
+            height: 40px;
+            width: auto;
+            max-width: 100px;
+            margin-right: 15px;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+
+    
+/* // Admin Paneli Stilleri */
+
+         .table-danger td {
+            opacity: 0.7;
+        }
+
+
+
+        

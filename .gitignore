@@ -1,0 +1,12 @@
+# SQLite veritabanı dosyaları
+db/database.sqlite
+db/database.sqlite-shm
+db/database.sqlite-wal
+
+# Composer vendor klasörü
+vendor/
+
+# IDE veya sistem dosyaları
+*.log
+*.env
+.DS_Store
