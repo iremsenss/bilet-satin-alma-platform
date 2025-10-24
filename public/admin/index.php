@@ -17,7 +17,7 @@ if (!isLoggedIn() || $_SESSION['user_role'] !== 'admin') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Paneli</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 
@@ -129,7 +129,7 @@ if (!isLoggedIn() || $_SESSION['user_role'] !== 'admin') {
     <div class="sidebar">
         <p class="text-center fw-bold border-bottom pb-3 pt-1">Menü</p>
         <ul>
-            <li><a href="../../public/index.php" class="border-bottom pb-3"><i class="fa-solid fa-house "></i> Ana Sayfa</a></li>
+            <li><a href="/index.php" class="border-bottom pb-3"><i class="fa-solid fa-house "></i> Ana Sayfa</a></li>
             <li><a href="cities.php" class="border-bottom pb-3"><i class="fa-solid fa-city"></i> Şehir Yönetimi</a></li>
             <li><a href="firms.php" class="border-bottom pb-3"><i class="fa-solid fa-building"></i> Firma Yönetimi</a></li>
             <li><a href="firmadmins.php" class="border-bottom pb-3"><i class="fa-solid fa-user-tie"></i> Firma Admin Yönetimi</a></li>

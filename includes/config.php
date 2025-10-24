@@ -5,17 +5,11 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 /**
- * SQLite Veritabanı Bağlantısını Kurar
- * @return PDO PDO bağlantı nesnesi
- */
-
-/**
- * SQLite Veritabanı Bağlantısını Kurar ve Eş Zamanlı İşlemler İçin Optimize Eder.
  * @return PDO PDO bağlantı nesnesi
  */
 function getdbConnection()
 {
-    $db_file = __DIR__ . "/../db/database.sqlite";
+    $db_file = '/var/www/html/db/database.sqlite';
 
     $dsn = "sqlite:$db_file";
 

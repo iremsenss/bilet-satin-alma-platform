@@ -1,13 +1,12 @@
 version: "3.8"
 
 services:
-  php-apache:
+  bilet-satin-alma:
     build: .
     container_name: bilet_satin_alma
     ports:
       - "8080:80"
     volumes:
-      - .:/var/www/html
-      - ./db:/var/www/html/db
+      - ./:/var/www/html
     environment:
       - TZ=Europe/Istanbul
