@@ -2,15 +2,20 @@
 
 Dinamik, veritabanı destekli ve çok kullanıcı rolleri olan bir otobüs bilet satın alma platformu.
 
-## Özellikler
+## ✨ Temel Özellikler
+Kullanıcı Rolleri: Ziyaretçi, Yolcu, Firma Admin, Admin gibi farklı yetki seviyeleri.
 
-- Kullanıcı Rolleri: Ziyaretçi, Yolcu, Firma Admin, Admin
-- Sefer arama ve listeleme
-- Bilet satın alma ve iptal
-- PDF bilet üretimi
-- Firma ve Admin paneli (CRUD işlemleri)
-- Kupon yönetimi
-- Docker ile paketlenmiş
+Sefer İşlemleri: Detaylı sefer arama ve listeleme.
+
+Bilet Yönetimi: Bilet satın alma ve iptal etme fonksiyonları.
+
+PDF Bilet: Satın alınan biletler için PDF formatında çıktı üretimi.
+
+Yönetim Panelleri: Firma ve Admin kullanıcıları için CRUD (Oluşturma, Okuma, Güncelleme, Silme) işlemlerini içeren yönetim panelleri.
+
+Kupon Yönetimi: İndirim kuponu oluşturma ve kullanma altyapısı.
+
+Paketleme: Kolay dağıtım ve çalıştırma için Docker ile paketlenmiştir.
 
 ## Teknolojiler
 
@@ -20,7 +25,7 @@ Dinamik, veritabanı destekli ve çok kullanıcı rolleri olan bir otobüs bilet
 - Docker & Docker Compose
 - FPDF (PDF üretimi)
 
-## Kurulum
+## 🚀 Kurulum Talimatları:
 
 1. Repo’yu klonlayın:
 
@@ -45,11 +50,12 @@ docker-compose up -d
 http://localhost:8080
 ```
 
-## Kullanıcılar 
+## 👤 Test Kullanıcı Bilgileri 
 
-Kullanıcı Rolü,E-posta Adresi,Şifre
-Admin,admin@ticketbox.com,admin123
-Firma Admin,aliosmanulusoy@ticketbox.com,123456
-Firma Admin,metro@ticketbox.com,123456
-Firma Admin,varan@ticketbox.com,123456
-Firma Admin,pamukkale@ticketbox.com,123456
+| Kullanıcı Rolü | E-posta Adresi | Şifre |
+| :--- | :--- | :--- |
+| Admin | admin@ticketbox.com | admin123 |
+| Firma Admin | aliosmanulusoy@ticketbox.com | 123456 |
+| Firma Admin | metro@ticketbox.com | 123456 |
+| Firma Admin | varan@ticketbox.com | 123456 |
+| Firma Admin | pamukkale@ticketbox.com | 123456 |
