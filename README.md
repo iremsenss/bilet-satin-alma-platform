@@ -45,3 +45,11 @@ docker-compose up -d
 http://localhost:8080
 ```
 
+## Kullanıcılar 
+
+Kullanıcı Rolü,E-posta Adresi,Şifre
+Admin,admin@ticketbox.com,admin123
+Firma Admin,aliosmanulusoy@ticketbox.com,123456
+Firma Admin,metro@ticketbox.com,123456
+Firma Admin,varan@ticketbox.com,123456
+Firma Admin,pamukkale@ticketbox.com,123456
